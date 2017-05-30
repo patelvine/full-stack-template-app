@@ -1,0 +1,44 @@
+
+.contact-content{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.left-content, .right-content{
+	display: inline-block;
+	margin: 15px;
+	max-width: 500px;
+	height:700px;
+	vertical-align: top;
+	background-color: #FAFAFA;
+	border: 1px solid lightgrey;
+	padding-left: 20px;
+	border-radius: 20px;
+	padding-bottom: 15px;
+}
+
+.left-content div h2 , .row-fluid, .map{
+	text-align: left;
+}
+.map{
+
+	padding-right: 20px;
+}
+.right-content h2{
+	margin-bottom: 32px;
+}
+
+.hrMap,.hrHeader{
+	border-top: 1px solid lightgrey;
+	margin-left: 0;
+	margin-top: 2px;
+}
+.hrMap{
+	width: 90%
+}
+.hrHeader{
+	width: 30%;
+}
+.form-area{
+	margin-right: 20px;
+}

@@ -1,0 +1,22 @@
+.container{
+	text-align: center;
+}
+.score{
+	margin: 0;
+	top:4px;
+	left: 15px;
+}
+.btn-push,.score{
+	display: inline-block;
+}
+
+#cardForm{
+	margin-top:20px;
+	
+}
+.form-area{
+	margin-top: 50px;
+	background-color: #FAFAFA;
+	border: 1px solid lightgrey;
+	border-radius: 20px;
+}

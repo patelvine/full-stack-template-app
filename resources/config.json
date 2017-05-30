@@ -1,0 +1,14 @@
+{ 
+	"AppType" : "PUBLIC",
+	"UserAgent" : "Xero-Java-Public—CUSTOMIZE-FOR-YOUR-APP",
+	"Accept" : "application/xml", 
+	"ConsumerKey" : "53PTOSMK8N57ZOL1NOLZYS9H6FLABB",
+	"ConsumerSecret" : "SYLNVAJGHCSELCJ9ATRE3YKNWIJCCC",
+	"ApiBaseUrl" : "https://api.xero.com",
+	"ApiEndpointPath" : "/api.xro/2.0/",
+	"RequestTokenPath": "/oauth/RequestToken",
+	"AuthenticateUrl" : "https://api.xero.com/oauth/Authorize",
+	"AccessTokenPath"  : "/oauth/AccessToken",
+	"CallbackBaseUrl" : "https://localhost",
+	"CallbackPath" : "/CallbackServlet"
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head id = "head">
+        <title>template - Result</title>       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/master.js"></script>
+        <script type="text/javascript" src="assets/js/result.js"></script>
+        <link href="assets/css/promotion.css" rel="stylesheet">
+        <link href="assets/css/result.css" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+
+    </head>
+
+    <body id = "body" style='display:none;'>        
+        <!-- body content===-->
+        <div class ="body-container" >
+            <div class="container">
+                <h2>History Promotions</h2>
+                <div id="users">
+                    <input class="search" placeholder="Search" />
+                    <button class="sort" data-sort="time">Sort by Time</button>
+                    <button class="sort" data-sort="location">Sort by Location</button>
+                    <ul class="list resultList"></ul>
+                </div>
+            </div>
+        </div>
+        <footer id = "footer"></footer>
+    </body>
+</html>

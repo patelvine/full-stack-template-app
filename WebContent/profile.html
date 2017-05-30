@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head id = "head">
+        <title>template - Profile</title>       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/master.js"></script>
+        <link href="assets/css/profile.css" rel="stylesheet">
+        <script type="text/javascript" src="assets/js/profile.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+        <link href="assets/css/bootstrap-tagsinput.css" rel="stylesheet">
+        <script type="text/javascript" src="assets/js/bootstrap-tagsinput.js"></script>
+    </head>
+
+    <body id = "body" style='display:none;'>        
+        <!-- body content===-->
+        <div class ="body-container" >
+            <div class="container">
+                <h2>Profile</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-pills nav-stacked admin-menu">
+                            <li id="hom" class="active"><a href="#" data-target-id="home"><i class="fa fa-home fa-fw"></i>Home</a></li>
+                            <li id="pro"><a href="#" data-target-id="Profile"><i class="fa fa-list-alt fa-fw"></i>Profile</a></li>
+                            <li id="set"><a href="#" data-target-id="Settings"><i class="fa fa-cogs fa-fw"></i>Settings</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9 well admin-content" id="home">
+                        <p>Hi <span class="username"></span>! Welcome to your profile, you can 
+                            edit your personal infomation 
+                            <a id="profileClick" href="#">here</a>.
+                        </p>
+                        <p>You can change your login detail, add or subtract locations and product list  
+                            <a id="settingsClick" href="#">here</a>.
+                        </p>
+                    </div>
+                    <div class="col-md-9 well admin-content" id="Profile">
+                        <h3>Edit Profile</h3>
+                        <hr>
+                        <div class="row">
+                          <!-- left column -->
+                          <!-- <div class="col-md-3">
+                            <div class="text-center">
+                              <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+                              <h6>Upload a different photo...</h6>
+                              
+                              <input type="file" class="form-control">
+                            </div>
+                          </div> -->
+                          
+                            <!-- edit form column -->
+                            <div class="col-md-9 personal-info">
+                                <h4>Personal info</h4>
+                                <form id="editForm" class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">Username:</label>
+                                        <div class="col-lg-8">
+                                          <input id="name" name="name" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">Email:</label>
+                                        <div class="col-lg-8">
+                                          <input id="email" name="email" class="form-control email" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">Phone:</label>
+                                        <div class="col-lg-8">
+                                          <input id="phone" name="phone" class="form-control" type="text" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">Industry:</label>
+                                        <div class="col-lg-8">
+                                          <input id="industry" name="industry" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">Position:</label>
+                                        <div class="col-lg-8">
+                                          <input id="position" name="position" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">Primary Location:</label>
+                                        <div class="col-lg-8">
+                                          <input id="location" name="location" class="form-control" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label"></label>
+                                        <div class="col-md-8">
+                                          <input id="btn-saveChanges" type="button" class="btn btn-primary" value="Save Changes">
+                                          <span></span>
+                                          <input id="btn-cancelChanges" type="button" class="btn btn-default" value="Cancel">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                       <!--  <div class="error-text"><span id="err"></span></div> -->
+                    </div>
+
+                    <div class="col-md-9 well admin-content" id="Settings">
+                        <h3>Edit Password</h3>
+                        <div class="row">
+                          <!-- edit form column -->
+                            <div class="col-md-9 personal-info">
+                                <form id="editPassForm" class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Email:</label>
+                                        <div class="col-md-8">
+                                          <input id="email" name="email" class="form-control email" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Current Password:</label>
+                                        <div class="col-md-8">
+                                          <input id="c_password" name="c_password" class="form-control" type="password" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">New Password:</label>
+                                        <div class="col-md-8">
+                                          <input id="password" name="password" class="form-control" type="password" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Confirm Password:</label>
+                                        <div class="col-md-8">
+                                          <input id="confirm_password" name="confirm_password" class="form-control" type="password" >
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="error-text"><span id="err"></span></div>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label"></label>
+                                        <div class="col-md-8">
+                                          <input id="btn-changePass" type="button" class="btn btn-primary" value="Save Changes">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <hr class='seprate'>
+                        <h3>Add/subtract Locations</h3>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <form id="locForm" class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Add Locations:</label>
+                                        <div class="col-md-8">
+                                          <input id="addLoc" name="addLoc" type="text" data-role="tagsinput" >
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label"></label>
+                                        <div class="col-md-8">
+                                          <input id="btn-addLoc" type="button" class="btn btn-primary" value="Add">
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">remove Locations:</label>
+                                        <div class="col-md-8">
+                                            <select id="loc-select" class="location-select" multiple="multiple">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label"></label>
+                                        <div class="col-md-8">
+                                          <input id="btn-RemoveLoc" type="button" class="btn btn-primary" value="Remove">
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <hr class='seprate'>
+                        <h3>Add/subtract Product List</h3>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <form id="prodForm" class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Add Products:</label>
+                                        <div class="col-md-8">
+                                          <input id="addprod" name="addprod" type="text" data-role="tagsinput" >
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label"></label>
+                                        <div class="col-md-8">
+                                          <input id="btn-addprod" type="button" class="btn btn-primary" value="Add">
+                                        </div>
+                                    </div>
+                                </form>
+
+                                 <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">remove Products:</label>
+                                        <div class="col-md-8">
+                                            <select  id="pro-select" class="product-select" multiple="multiple">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label"></label>
+                                        <div class="col-md-8">
+                                          <input id="btn-RemovePro" type="button" class="btn btn-primary" value="Remove">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id = "footer"></footer>
+    </body>
+</html>

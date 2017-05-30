@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head id = "head">
+        <title>template - Get Promotion</title>       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/master.js"></script>
+        <script type="text/javascript" src="assets/js/promotion.js"></script>
+        <link href="assets/css/promotion.css" rel="stylesheet">
+        
+
+    </head>
+
+    <body id = "body" style='display:none;'>        
+        <!-- body content===-->
+        <div class ="body-container" >
+            <div class="container">
+                <h2>Recomended Promotions</h2>
+                <div id="users">
+                    <input class="search" placeholder="Search" />
+                    <button class="sort" data-sort="time">Sort by Time</button>
+                    <button class="sort" data-sort="location">Sort by Location</button>
+                    <ul class="list"></ul>
+                </div>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="social-media" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                      <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 >Push Promotion</h4>
+                            </div>
+                            <div class="modal-body">
+                                <a class="btn btn-block btn-social btn-twitter">
+                                    <span class="fa fa-twitter"></span> Post to Twitter
+                                </a>
+                                <a class="btn btn-block btn-social btn-facebook">
+                                    <span class="fa fa-facebook"></span> Post to Facebook
+                                </a>
+                                <a class="btn btn-block btn-social btn-instagram">
+                                    <span class="fa fa-instagram"></span> Post to Instagram
+                                </a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <footer id = "footer"></footer>
+    </body>
+</html>

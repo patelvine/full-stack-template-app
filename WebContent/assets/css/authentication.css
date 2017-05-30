@@ -1,0 +1,53 @@
+/*signUp form*/
+#signupbox, #loginbox{
+	margin-top:80px;
+}
+.forgot-pass{
+	float:right; 
+	font-size: 80%; 
+	position: relative; 
+	top:-15px;
+}
+#p-body{
+	padding-top:30px;
+}
+#end-text{
+	border-top: 1px solid#888; 
+	padding-top:15px; 
+	font-size:85%;
+}
+.input-field{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.form-group{
+	margin-top:10px;
+}
+#r-checkbox{
+	margin: 0;
+}
+.help-block {
+    color: red;
+    margin-top: -25px;
+}
+
+/*register form*/
+#signupbox{
+	padding-bottom: 50px;
+}
+
+label.col-md-3.control-label{
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	padding-top: 7px;
+}
+
+form #err{ 
+	display: none;
+	color: red;
+	font-style: italic;
+	font-weight: bold;
+	width: auto;
+	display: inline;
+}

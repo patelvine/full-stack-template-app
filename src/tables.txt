@@ -1,0 +1,122 @@
+Tables:
+
+create table weather(
+	cityid 			int 	primary key not null,
+	UTCDate			numeric not null,
+	main 			varchar not null,
+	description		varchar not null,
+	temp 			decimal not null,
+	pressure 		decimal not null,
+	humidity		decimal not null,
+	windspeed		decimal not null,
+	winddeg 		decimal not null,
+	clouds 			decimal,
+	rain 			decimal,
+	snow			decimal
+);
+
+create table city(
+	cityid 			int	 	primary key not null,
+	cityname		varchar not null,
+	country 		varchar not null,
+	lat				decimal not null,
+	lon				decimal not null
+);
+
+create extension citext;
+create table users(
+	email PRIMARY KEY 		citext 		not null,
+	password 				varchar		not null,
+	username				varchar		not null,
+	phone 					varchar 	not null,
+	"Contact Person"		varchar 	not null,
+	"Contact Time"			time 		not null,
+	position				varchar 	not null,
+	industry				varchar		not null,
+	"primary location"		varchar 	not null,
+	"number of locations"	int 		not null,
+	"number of employees" 	int 		not null
+); 
+
+create table store_location(
+	email citext references users(email),
+	location 	varchar not null unique
+);
+
+create table product_list(
+	email citext references users(email),
+	product 	varchar not null unique
+);
+
+create table sites(
+	domain	 varchar primary key not null,
+	Websites varchar not null
+);
+
+create table location(
+	place_id	varchar	not null,
+	long 		numeric	not null,
+	lat 		numeric	not null,
+	name 		varchar	not null,
+	rating 		numeric,
+	id 			varchar	not null,
+	scope 		varchar,
+	review 		int,
+	website 	varchar	not null,
+	PRIMARY KEY(long,lat)
+);
+
+//this table is the location types
+create table places(
+	long 		numeric	not null,
+	lat 		numeric	not null,
+	types		varchar,
+	FOREIGN KEY(long,lat) references location(long,lat) on delete cascade
+);
+
+
+//Twitter trending table 
+create table trendings(
+	location varchar not null,
+	woeid int,
+	topic text not null ,
+	link text ,
+	date timestamp ,
+	PRIMARY KEY(location , topic, link,date)
+
+);
+
+//Events table
+create table events(
+	city varchar , 
+	name text ,
+	date timestamp,
+	url text,
+	lastupdate timestamp,
+	PRIMARY KEY (city,name,date,url)
+
+);
+
+create table promotions(
+	email citext references users(email), 	
+	name 		varchar 	 not null,
+	price 		money	  	not null,
+	time  		time 		not null,
+	location  	varchar 	not null,
+	score  		int 		not null
+);
+
+create table sales(
+	email citext references users(email),
+	num_of_sales 	int 	not null,
+	time 			time  	not null
+);
+
+create table promotion_history(
+	email citext references users(email), 	
+	name 		varchar 	 not null,
+	price 		money	  	not null,
+	time  		time 		not null,
+	location  	varchar 	not null,
+	score  		int 		not null
+);
