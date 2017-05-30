@@ -1,4 +1,3 @@
 # template
 
-demo:
-<a>evening-forest-47381.herokuapp.com</a>
+demo: https://full-stack-template-app.herokuapp.com/
